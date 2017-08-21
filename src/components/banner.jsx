@@ -1,22 +1,20 @@
 import React, { Component } from 'react';
-import Slide1 from '../assets/images/slide1.jpg';
-import Slide2 from '../assets/images/slide2.jpg';
 
-class Slider extends Component {
+class Banner extends Component {
     render() {
         return (
             <div>
-               <section id="home">
+                <section classID="home">
 
-                    <div className="tp-banner-container">
-                        <div className="tp-banner" >
+                    <div class="tp-banner-container">
+                        <div class="tp-banner" >
                             <ul>
                 
                                 <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on"  data-title="Slide 1">
                         
-                                    <img src={Slide1}  alt="slidebg1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+                                    <img src="images/slide1.jpg"  alt="slidebg1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
                     
-                                    <div className="tp-caption tp-resizeme sft sub-heading"
+                                    <div class="tp-caption tp-resizeme sft sub-heading"
                                         data-x="center" data-hoffset="0"
                                         data-y="center" data-voffset="-50"
                                         data-speed="300"
@@ -27,7 +25,7 @@ class Slider extends Component {
                                         data-endspeed="300">Welcome to my site
                                     </div>
                 
-                                    <div className="tp-caption box-title sfb tp-fade tp-resizeme"
+                                    <div class="tp-caption box-title sfb tp-fade tp-resizeme"
                                         data-x="center" data-hoffset="0"
                                         data-y="center" data-voffset="30"
                                         data-speed="300"
@@ -41,8 +39,8 @@ class Slider extends Component {
                     
                                 <li data-transition="fade" data-slotamount="7" data-masterspeed="600" data-saveperformance="on"  data-title="Slide 2" >
                                     
-                                    <img src={Slide2} alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
-                                    <div className="tp-caption tp-resizeme sft sub-heading"
+                                    <img src="images/slide2.jpg" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+                                    <div class="tp-caption tp-resizeme sft sub-heading"
                                         data-x="center" data-hoffset="0"
                                         data-y="center" data-voffset="-50"
                                         data-speed="300"
@@ -54,7 +52,7 @@ class Slider extends Component {
                                     </div>
 
 
-                                    <div className="tp-caption box-title tp-fade sfb tp-resizeme"
+                                    <div class="tp-caption box-title tp-fade sfb tp-resizeme"
                                         data-x="center" data-hoffset="0"
                                         data-y="center" data-voffset="30"
                                         data-speed="300"
@@ -66,7 +64,7 @@ class Slider extends Component {
                                     </div>
                                 </li>
                             </ul>
-                            <div className="tp-bannertimer"></div>
+                            <div class="tp-bannertimer"></div>
                         </div>
                     </div>
 
@@ -76,4 +74,4 @@ class Slider extends Component {
     }
 }
 
-export default Slider;
+export default Banner;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Header from './components/header';
-// import Slider from './components/slider';
+import Slider from './components/slider';
 import About from './components/about';
 import Works from './components/works';
 import Skills from './components/skills';
@@ -21,7 +21,7 @@ class App extends Component {
         </div>
         
 
-       
+          <Slider />
           <About />
 
           <Works />
