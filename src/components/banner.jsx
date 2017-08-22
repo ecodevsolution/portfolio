@@ -4,7 +4,7 @@ class Banner extends Component {
     render() {
         return (
             <div>
-                <section classID="home">
+                <section id="home">
 
                     <div class="tp-banner-container">
                         <div class="tp-banner" >

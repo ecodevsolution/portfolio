@@ -3,95 +3,78 @@ import React, { Component } from 'react';
 class Resume extends Component {
     render() {
 
-        var style = {
-            opacity: '1',
-            bottom: '0px'
-        };
-
         return (
-            <div>
+             <div>
                 <div className="fullwidth-section bg-callout">
                     <div className="container">
-                        <div className="col-md-12 text-center item_bottom" style={style}>
+                        <div className="col-md-12 text-center item_bottom">
                             <h1 className="white padBottom killMargin">I am available for <strong>Freelancer</strong></h1>
-                            <a href="#contact" className="scroll btn btn-trans btn-border-w btn-large">Hire Me</a>&nbsp;&nbsp;<a className="btn btn-primary btn-lg" href=""><i className="fa fa-download"></i> Download Resume</a>
+                            <a href="#contact" className="scroll btn btn-trans btn-border-w btn-large">Hire Me</a>&nbsp;&nbsp;<a className="btn btn-primary btn-lg" href="images/resume/Curiculum-Vitae.pdf"><i className="fa fa-download"></i> Download Resume</a>
                         </div>
                     </div>
                 </div>
 
-                 <section classID="experience" className="section-content bg2">
+                <section id="experience" className="section-content bg2">
                     <div className="container">
                         <div className="row">                            
-                            <div className="section-title item_bottom text-center" style={style}>
+                            <div className="section-title item_bottom text-center">
                                 <div>
                                     <span className="fa fa-book fa-2x"></span>
                                 </div>
                                 <h1>My <span>Resume</span></h1>
-                            </div>                            
+                            </div>                        
                         </div>
-
-                         <div className="row">
+                        <div className="row">
                             <ul className="timeline list-unstyled">                                
-                                <li className="title">Present</li>
+                                <li className="title"><h4>Such as</h4></li>
                                 <li className="note item_right">
-                                    <h4>Creative Agency</h4>
-                                    <h5>Project Manager</h5>
+                                    <h4>Coco Indah Jaya</h4>
+                                    <h5>Dekstop Application Developers</h5>
                                     <p className="desc">
-                                        Lorem Ipsum roin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat.
+                                        Coco Indah jaya is a company engaged in the field of wholesale salon equipment. The system create for help a company in sales order and checking item in the warehouse.
                                     </p>
-                                    <span className="date">
-                                    DEC 2013 to Present</span>
+                                    <span className="date">Jan 2013 </span>
                                     <span className="arrow fa fa-play"></span>
                                 </li>
+                                
                                 <li className="note item_left">
-                                    <h4>Infosys</h4>
-                                    <h5>UI/UX Designer</h5>
+                                    <h4>Bheuporia Grand Arloji</h4>
+                                    <h5>Dekstop Application Developers</h5>
                                     <p className="desc">
-                                        Lorem Ipsum roin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat.
+                                        Bheuporia Grand Arloji is a company engaged in the field of arloji at plaza melawai Blok M. The system create for helping company in sales order and checking product to produce valid data.
                                     </p>
-                                    <span className="date">
-                                    JUN 2012 to NOV 2013 </span>
+                                    <span className="date">OCT 2013 </span>
                                     <span className="arrow fa fa-play"></span>
                                 </li>
+                                
                                 <li className="note item_right">
-                                    <h4>Micro Web Planet</h4>
-                                    <h5>Web Developer</h5>
+                                    <h4>Balkesmas 'ASISI'</h4>
+                                    <h5>Dekstop Application Developers</h5>
                                     <p className="desc">
-                                        Lorem Ipsum roin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat. Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, quis bibendum auctor, nisi elit consequat.
+                                        Balkesmas ASISI, located in TEBET. The system create using C# language with MYSQL database for helping registration patient, drug sales and medical records.
                                     </p>
-                                    <span className="date">
-                                    Jan 2012 MAY 2012 </span>
+                                    <span className="date">March 2014</span>
                                     <span className="arrow fa fa-play"></span>
                                 </li>
+                                
                                 <li className="note item_left">
-                                    <h4>Creative Solution</h4>
-                                    <h5>Web Designer</h5>
+                                    <h4>Agency Jakarta</h4>
+                                    <h5>Web Application Developer</h5>
                                     <p className="desc">
-                                        Lorem Ipsum roin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat.
+                                        Agency Jakarta is a company business from PT Bagus Pratama Mandiri , The system create using PHP with MYSQL database to helping perfomance of employee for recruitment, employement contract, scheduling, salary and client payment so all of process can be integrated
                                     </p>
-                                    <span className="date">
-                                    Jan 2011 to Dec 2012 </span>
+                                    <span className="date"> JAN 2015 </span>
                                     <span className="arrow fa fa-play"></span>
-                                </li>                                
+                                </li>
+                                                            
                                 <li className="title">Education</li>
                                 <li className="note item_left">
-                                    <h4>Master Degree of Computer Science</h4>
-                                    <h5>Oxford University</h5>
+                                    <h4>Bachelor Degree of Computer Science</h4>
+                                    <h5>Binus University</h5>
                                     <p className="desc">
-                                        This is Photoshop's version Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                                        I hold a bachelor's degree of Information System from the Binus University with interest on Business Intelegence (BI).
                                     </p>
-                                    <span className="date">
-                                    2012 - 2013 </span>
-                                    <span className="arrow fa fa-play"></span>
-                                </li>
-                                <li className="note item_right">
-                                    <h4>Bechelor Degree of Computer Science</h4>
-                                    <h5>Oxford University</h5>
-                                    <p className="desc">
-                                        Lorem Ipsum. This is Photoshop's version Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                                    </p>
-                                    <span className="date">
-                                    2007 - 2011 </span>
+                                    <span className="date">2010 - 2015 </span>
                                     <span className="arrow fa fa-play"></span>
                                 </li>                                
                                 <li className="start fa fa-bookmark"></li>

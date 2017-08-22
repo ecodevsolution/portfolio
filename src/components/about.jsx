@@ -4,24 +4,24 @@ import Signature from '../assets/images/signature.PNG';
 
 class About extends Component {
     render() {
-        var style = {
-            opacity: '1',
-            bottom: '0px'
-        };
-        var styleLeft = {
-            opacity: '1',
-            left: '0px'
-        };
-         var styleRight = {
-            opacity: '1',
-            right: '0px'
-        };
+        // var style = {
+        //     opacity: '1',
+        //     bottom: '0px'
+        // };
+        // var styleLeft = {
+        //     opacity: '1',
+        //     left: '0px'
+        // };
+        //  var styleRight = {
+        //     opacity: '1',
+        //     right: '0px'
+        // };
         return (
             <div>
-                 <section classID="about" className="section-content bg1">
+                 <section id="about" className="section-content bg1">
                     <div className="container">
                         <div className="row">                                
-                            <div className="section-title item_bottom text-center" style={style} >
+                            <div className="section-title item_bottom text-center" >
                                 <div>
                                     <span className="fa fa-user fa-2x"></span>
                                 </div>
@@ -30,14 +30,14 @@ class About extends Component {
                         </div>
 
                        <div className="row">
-                            <div className="col-md-4 text-center item_bottom" style={style}>
+                            <div className="col-md-4 text-center item_bottom" >
                                 <img src={MyPhoto} className="img-center img-responsive" alt=""/>                                
                                 <div className="name-title">
                                     <h2>Adi Nugraha</h2>                                    
                                     <h5>Web and Application Developer</h5>                                    
                                 </div>
                             </div>                            
-                            <div className="col-md-4 item_top" style={style}>
+                            <div className="col-md-4 item_top" >
                                 <p className="quoteline">
                                     Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.
                                 </p>
@@ -52,7 +52,7 @@ class About extends Component {
                                 </p>
                             </div>
                             
-                            <div className="col-md-4 item_bottom" style={style}>
+                            <div className="col-md-4 item_bottom">
                                 
                                 <ul className="fa-ul">
                                     <li><i className="fa fa-li fa-calendar"></i><strong>Birthdate</strong> : 04 September 1992</li>
@@ -95,7 +95,7 @@ class About extends Component {
                         </div>
                         <div className="row services" >
                             <div className="col-md-4">                            
-                                <div className="services-box new-line item_left" style={styleLeft}>
+                                <div className="services-box new-line item_left" >
                                     <h4>WEB DESIGN</h4>
                                     <div className="services-box-icon">
                                         <i className="fa fa-smile-o fa-3x"></i>
@@ -108,7 +108,7 @@ class About extends Component {
                                 </div>                                
                             </div>
                             <div className="col-md-4">                                
-                                <div className="services-box new-line item_bottom" style={style}>
+                                <div className="services-box new-line item_bottom">
                                     <h4>Web Design</h4>
                                     <div className="services-box-icon">
                                         <i className="fa fa-html5 fa-3x"></i>
@@ -121,7 +121,7 @@ class About extends Component {
                                 </div>                                
                             </div>
                             <div className="col-md-4 clearfix">                                
-                                <div className="services-box new-line item_right" style={styleRight}>
+                                <div className="services-box new-line item_right">
                                     <h4>Wordpress Themes</h4>
                                     <div className="services-box-icon">
                                         <i className="fa fa-link fa-3x"></i>
