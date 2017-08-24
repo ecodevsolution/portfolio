@@ -17,7 +17,7 @@ class Skills extends Component {
                         <div className="row text-center item_bottom">
                             <div className="col-md-2">
                                 <div className="chart" data-percent="85">
-                                    <span className="percent">85</span>
+                                    <span className="percent">80</span>
                                     <h4>C#</h4>
                                     <p>
                                         I have experience in C# language for 3 years.
@@ -26,19 +26,19 @@ class Skills extends Component {
                             </div>
                             <div className="col-md-2 ">
                                 <div className="chart" data-percent="75">
-                                    <span className="percent">75</span>
+                                    <span className="percent">70</span>
                                     <h4>Java</h4>
                                     <p>
-                                        I have experience in C# language for a half 2 years.
+                                        I have experience in Java language for a 1 years.
                                     </p>
                                 </div>
                             </div>
                             <div className="col-md-2">
                                 <div className="chart" data-percent="85">
-                                    <span className="percent">85</span>
+                                    <span className="percent">90</span>
                                     <h4>HTML</h4>
                                     <p>
-                                        I have experience in C# language for 3 years.
+                                        I have experience in HTML language for 5 years.
                                     </p>
                                 </div>
                             </div>
@@ -47,25 +47,25 @@ class Skills extends Component {
                                     <span className="percent">80</span>
                                     <h4>CSS</h4>
                                     <p>
-                                        I have experience in C# language for 3 years.
+                                        I have experience in CSS language for 5 years.
                                     </p>
                                 </div>
                             </div>
                             <div className="col-md-2">
                                 <div className="chart" data-percent="75">
-                                    <span className="percent">75</span>
+                                    <span className="percent">80</span>
                                     <h4>jQuery</h4>
                                     <p>
-                                        I have experience in C# language for 2 years.
+                                        I have experience in Jquery language for 4 years.
                                     </p>
                                 </div>
                             </div>
                             <div className="col-md-2">
                                 <div className="chart" data-percent="85">
-                                    <span className="percent">85</span>
+                                    <span className="percent">90</span>
                                     <h4>PHP</h4>
                                     <p>
-                                        I have experience in C# language for 3 years.
+                                        I have experience in PHP language for 5 years.
                                     </p>
                                 </div>
                             </div>

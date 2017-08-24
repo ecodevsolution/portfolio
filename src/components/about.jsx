@@ -2,20 +2,25 @@ import React, { Component } from 'react';
 import MyPhoto from '../assets/images/me.png';
 import Signature from '../assets/images/signature.PNG';
 
+const BASE_URL = 'http://uatspaj.mnclife.com/index.php/api/service/tsar/?client_name=ROLLA&birth_date=1966-04-03%2000:00:00.000&gender=m&risk_group=term&format=json';
+  
 class About extends Component {
+
     render() {
-        // var style = {
-        //     opacity: '1',
-        //     bottom: '0px'
-        // };
-        // var styleLeft = {
-        //     opacity: '1',
-        //     left: '0px'
-        // };
-        //  var styleRight = {
-        //     opacity: '1',
-        //     right: '0px'
-        // };
+          var myOptions = { 
+            method:'GET',                       
+            mode: 'cors',
+            cache: 'default'
+        };
+        
+        fetch(BASE_URL, myOptions )
+            .then(response => response.json())
+            .then(json => {
+                console.log('a',json[0]);
+                // const artist = json.artists.items[0];
+                // this.setState({artist});      
+            });        
+     
         return (
             <div>
                  <section id="about" className="section-content bg1">
@@ -64,28 +69,28 @@ class About extends Component {
                                 <div className="number-counters text-center new-line" >
                                     <div className="counters-item">
                                         <i className="fa fa-group fa-2x"></i>
-                                        <strong data-to="150">20</strong>                                    
+                                        <strong data-to="20">20</strong>                                    
                                         <p>
                                             Clients
                                         </p>
                                     </div>
                                     <div className="counters-item">
                                         <i className="fa fa-flag fa-2x"></i>
-                                        <strong data-to="7">5</strong>                                        
+                                        <strong data-to="5">5</strong>                                        
                                         <p>
                                             Year Experience
                                         </p>
                                     </div>
                                     <div className="counters-item">
                                         <i className="fa fa-clock-o fa-2x"></i>
-                                        <strong data-to="13">0</strong>                                        
+                                        <strong datann="0">0</strong>                                        
                                         <p>
                                             Ongoing Projects
                                         </p>
                                     </div>
                                     <div className="counters-item">
                                         <i className="fa fa-thumbs-up fa-2x"></i>
-                                        <strong data-to="520">20</strong>                                        
+                                        <strong data-to="20">20</strong>                                        
                                         <p>
                                             Projects Done
                                         </p>

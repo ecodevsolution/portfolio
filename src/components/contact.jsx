@@ -18,8 +18,8 @@ class Contact extends Component {
                             <div className="col-md-6 col-md-offset-3 text-center contact-block">                                
                                 <i className="fa fa-map-marker fa-3x"></i>                                
                                 <div className="social-icon">
-                                    <a className="https://twitter.com/madhinugraha"><i className="fa fa-twitter-square fa-3x"></i></a>
-                                    <a className="http://id.linkedin.com/in/madinugraha/"><i className="fa fa-linkedin-square fa-3x"></i></a>
+                                    <a href="https://twitter.com/madhinugraha" target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter-square fa-3x"></i></a>
+                                    <a href="https://id.linkedin.com/in/madinugraha/" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin-square fa-3x"></i></a>
                                 </div>                                
                             </div>
                         </div>                        

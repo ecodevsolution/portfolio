@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 
-import tumb from '../assets/images/portfolio/thumb1.jpg';
-import tumb2 from '../assets/images/portfolio/thumb2.jpg';
+import agency from '../assets/images/portfolio/agency.PNG';
+import adi from '../assets/images/portfolio/adi.PNG';
+import rina from '../assets/images/portfolio/rina1.PNG';
+import shoper from '../assets/images/portfolio/shoper.PNG';
+import kitchen from '../assets/images/portfolio/kitchen.PNG';
+import stock from '../assets/images/portfolio/stock1.PNG';
+import asisi from '../assets/images/portfolio/asisi.png';
+import coco from '../assets/images/portfolio/coco keratin treatment.png';
 
 class Works extends Component {
     render() {
@@ -70,32 +76,96 @@ class Works extends Component {
                                 <div id="portfolio-items" className="portfolio-items item_fade_in">
                                     
           
-                                    <article className="desktop">
-                                            <a href="#!projects/project-single.html">
-                                                <img src={tumb} alt=""/>
-                                                <div className="overlay">
-                                                    <div className="item-info">
-                                                        <i className="fa fa-film"></i>
-                                                        <h3>Project with video</h3>
-                                                        <span>Photo / Web</span>
-                                                    </div>
-                                                </div>                                            
-                                            </a>
+                                   <article className="website">                                       
+                                        <img src={adi} alt="adinugraha.my.id"/>
+                                        <div className="overlay">
+                                            <div className="item-info">
+                                                <i className="fa fa-picture-o"></i>
+                                                <h3>Adinugraha</h3>
+                                                <span>Portfolio Website</span>
+                                            </div>
+                                        </div>                                                                                       
+                                    </article>
+                                    
+                                    <article className="website">                                       
+                                         <img src={rina} alt="rinaramadhan.com"/>
+                                         <div className="overlay">
+                                             <div className="item-info">
+                                                 <i className="fa fa-picture-o"></i>
+                                                 <h3>Rinaramadhan</h3>
+                                                 <span>Portfolio Website and Blog</span>
+                                             </div>
+                                         </div>                                                                                       
                                     </article>
 
-                                    <article className="website">
-                                        <a href="#!projects/project-single.html">
-                                            <img src={tumb2} alt=""/>
-                                            <div className="overlay">
-                                                <div className="item-info">
-                                                    <i className="fa fa-film"></i>
-                                                    <h3>Project with video</h3>
-                                                    <span>Photo / Web</span>
-                                                </div>
-                                            </div>                                            
-                                        </a>
+                                    <article className="website">                                        
+                                        <img src={kitchen} alt="kitchennetwork.co.id"/>
+                                        <div className="overlay">
+                                            <div className="item-info">
+                                                <i className="fa fa-picture-o"></i>
+                                                <h3>KitchenNetwork</h3>
+                                                <span>Website Application</span>
+                                            </div>
+                                        </div>                                                                                        
                                     </article>
 
+                                    <article className="website">                                        
+                                        <img src={shoper} alt="preview.shoper.co.id"/>
+                                        <div className="overlay">
+                                            <div className="item-info">
+                                               <i className="fa fa-picture-o"></i>
+                                                <h3>Shopper E-Commerce</h3>
+                                                <span>Web E-commerce</span>
+                                            </div>
+                                        </div>                                                                                    
+                                    </article>
+                                    
+                                     <article className="desktop">                                        
+                                        <img src={asisi} alt="asisi"/>
+                                        <div className="overlay">
+                                            <div className="item-info">
+                                                <i className="fa fa-camera"></i>
+                                                <h3>Balkesmas ASISI</h3>
+                                                <span>Desktop Application</span>
+                                            </div>
+                                        </div>                                                                                    
+                                    </article>
+
+                                    <article className="desktop">                                        
+                                        <img src={coco} alt="Coco Indah Jaya"/>
+                                        <div className="overlay">
+                                            <div className="item-info">
+                                                <i className="fa fa-camera"></i>
+                                                <h3>CoCo Indah Jaya</h3>
+                                                <span>Desktop Application</span>
+                                            </div>
+                                        </div>                                                                                    
+                                    </article>
+                                    
+
+                                    <article className="website">                                    
+                                        <img src={agency} alt="portal.agencyjakarta.co.id"/>
+                                        <div className="overlay">
+                                            <div className="item-info">
+                                                <i className="fa fa-picture-o"></i>
+                                                <h3>AgencyJakarta</h3>
+                                                <span>Website Application</span>
+                                            </div>
+                                        </div>                                                                                    
+                                    </article>
+
+                                    <article className="website">                                    
+                                        <img src={stock} alt="stock.shoper.co.id" />
+                                        <div className="overlay">
+                                            <div className="item-info">
+                                                <i className="fa fa-picture-o"></i>
+                                                <h3>Beebow Point of Sales</h3>
+                                                <span>Website Application</span>
+                                            </div>
+                                        </div>                                                                                        
+                                    </article>
+
+                                   
                                     
                                 </div>                                    
                             </div>

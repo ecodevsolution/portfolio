@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import cv from '../assets/images/resume/cv.pdf';
+
 class Resume extends Component {
     render() {
 
@@ -9,7 +11,7 @@ class Resume extends Component {
                     <div className="container">
                         <div className="col-md-12 text-center item_bottom">
                             <h1 className="white padBottom killMargin">I am available for <strong>Freelancer</strong></h1>
-                            <a href="#contact" className="scroll btn btn-trans btn-border-w btn-large">Hire Me</a>&nbsp;&nbsp;<a className="btn btn-primary btn-lg" href="images/resume/Curiculum-Vitae.pdf"><i className="fa fa-download"></i> Download Resume</a>
+                            <a href="#contact" className="scroll btn btn-trans btn-border-w btn-large">Hire Me</a>&nbsp;&nbsp;<a className="btn btn-primary btn-lg" href={cv} target="_blank"><i className="fa fa-download"></i> Download Resume</a>
                         </div>
                     </div>
                 </div>
@@ -66,8 +68,29 @@ class Resume extends Component {
                                     <span className="date"> JAN 2015 </span>
                                     <span className="arrow fa fa-play"></span>
                                 </li>
+
+                                <li className="note item_right">
+                                    <h4>RINARAMADHAN</h4>
+                                    <h5>Profile and Blog Website</h5>
+                                    <p className="desc">
+                                        Rinaramdhan.com is a profile website and blog for share information like culinary, visit and travel, using Yii2 Framework(PHP) and Mysql database.                                        
+                                    </p>
+                                    <span className="date">MAR 2015</span>
+                                    <span className="arrow fa fa-play"></span>
+                                </li>
+                                
+                                <li className="note item_left">
+                                    <h4>BEEBOW POS</h4>
+                                    <h5>Point of Sales System</h5>
+                                    <p className="desc">
+                                        Beebow is retail company who sales shoes, clothes and evrything about kids fashion , using Yii2 Framework(PHP) and Mysql database.                                        
+                                    </p>
+                                    <span className="date"> AUG 2017 </span>
+                                    <span className="arrow fa fa-play"></span>
+                                </li>
                                                             
-                                <li className="title">Education</li>
+                                <li className="title"> Education</li>
+
                                 <li className="note item_left">
                                     <h4>Bachelor Degree of Computer Science</h4>
                                     <h5>Binus University</h5>
@@ -76,7 +99,39 @@ class Resume extends Component {
                                     </p>
                                     <span className="date">2010 - 2015 </span>
                                     <span className="arrow fa fa-play"></span>
-                                </li>                                
+                                </li>    
+
+                                 <li className="note item_right">
+                                    <h4>Modern React with Redux</h4>
+                                    <h5>Udemy Online Course</h5>
+                                    <p className="desc">
+                                        Learn ReactJs and Redux to make awesome application
+                                    </p>
+                                    <span className="date">JUN 2017</span>
+                                    <span className="arrow fa fa-play"></span>
+                                </li>
+
+                                <li className="note item_left">
+                                    <h4>ReactJs and Redux - Mastering Web Apps</h4>
+                                   <h5>Udemy Online Course</h5>
+                                    <p className="desc">
+                                        Continue from <b>Modern React with Redux</b> in this course learn how to implement html and css in Jsx
+                                    </p>
+                                    <span className="date">AUG 2017</span>
+                                    <span className="arrow fa fa-play"></span>
+                                </li>    
+
+                                 <li className="note item_right">
+                                    <h4>Web Development with Google Go (Golang)</h4>
+                                    <h5>Udemy Online Course</h5>
+                                    <p className="desc">
+                                        Learn Basic Go Languange
+                                    </p>
+                                    <span className="date">AUG 2017</span>
+                                    <span className="arrow fa fa-play"></span>
+                                </li>
+
+                           
                                 <li className="start fa fa-bookmark"></li>
                                 <li className="clear"></li>
                             </ul>
