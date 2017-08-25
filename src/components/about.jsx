@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 import MyPhoto from '../assets/images/me.png';
 import Signature from '../assets/images/signature.PNG';
 
-const BASE_URL = 'http://uatspaj.mnclife.com/index.php/api/service/tsar/?client_name=ROLLA&birth_date=1966-04-03%2000:00:00.000&gender=m&risk_group=term&format=json';
+const BASE_URL = 'https://shoper.co.id/service.php?action=last_videos&limit=1&type=json';
   
 class About extends Component {
+    
+    constructor(props) {
+        super(props);
+
+        this.state = {national: []};
+    }
 
     render() {
           var myOptions = { 
@@ -13,14 +19,19 @@ class About extends Component {
             cache: 'default'
         };
         
-        fetch(BASE_URL, myOptions )
+        fetch(BASE_URL, myOptions)
             .then(response => response.json())
-            .then(json => {
-                console.log('a',json[0]);
-                // const artist = json.artists.items[0];
-                // this.setState({artist});      
+            .then(data => {                
+                this.setState({ national: data.RestResponse.result });                
             });        
-     
+             const nations = this.state.national.map((nation, i) => {
+                 console.log('nations',nation.country);
+                return <div>
+                    <h1>{nation.country}</h1>
+                    <span>{nation.capital}, {nation.name}</span>
+                </div>
+                });
+                
         return (
             <div>
                  <section id="about" className="section-content bg1">
@@ -44,6 +55,7 @@ class About extends Component {
                             </div>                            
                             <div className="col-md-4 item_top" >
                                 <p className="quoteline">
+                                    {nations}
                                     Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.
                                 </p>
                                 <p>

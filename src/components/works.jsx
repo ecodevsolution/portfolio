@@ -25,7 +25,7 @@ class Works extends Component {
                         </div>
                         <div className="portfolio-top"></div>
                         
-                        <div id="portfolio-wrap" tabindex="1">
+                        <div id="portfolio-wrap" tabIndex="1">
                             <div id="portfolio-page">
                                 <div id="portfolio-content">
                                     <div className="container">

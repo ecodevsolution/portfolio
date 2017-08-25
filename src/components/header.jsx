@@ -15,7 +15,7 @@ class Header extends Component {
                             </button>
                             <a className="navbar-brand" href=""><img className="logo" src={Logo} alt="" /></a>
                         </div>
-                        <nav id="my-nav" className="navbar-collapse collapse" roles="navigation">
+                        <nav id="my-nav" className="navbar-collapse collapse navigation">
                             <ul className="nav navbar-nav">
                                 <li className="active">
                                     <a href="#home">Home</a>
