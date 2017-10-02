@@ -1,16 +1,49 @@
 import React, { Component } from 'react';
+import ProgressiveImage from "react-progressive-image-loading";
 
-import agency from '../assets/images/portfolio/agency.PNG';
-import adi from '../assets/images/portfolio/adi.PNG';
-import rina from '../assets/images/portfolio/rina1.PNG';
-import shoper from '../assets/images/portfolio/shoper.PNG';
-import kitchen from '../assets/images/portfolio/kitchen.PNG';
-import stock from '../assets/images/portfolio/stock1.PNG';
-import asisi from '../assets/images/portfolio/asisi.png';
-import coco from '../assets/images/portfolio/coco keratin treatment.png';
 
 class Works extends Component {
+
+    constructor(){
+        super();
+        this.state = {
+            data:[]    
+        }
+        
+    }
+
+     componentDidMount() {      
+         
+        const URL = 'https://api.shoper.co.id/works.php';  
+            fetch(URL)
+            .then(response => response.json())
+            .then(json => {
+                this.setState({ data: json})            
+            })
+        }
+
     render() {
+    
+        const work = this.state.data.map((work) => {             
+            return <article key = {work.id} className={work.category}>
+                        <ProgressiveImage
+                            preview='../assets/images/preview/preview.png'
+                            src={work.image}
+                            render={(src, style) => <img src={src} style={style} alt={work.link} title = {work.link}/>}
+                        />                                                              
+                        <div className="overlay">
+                            <div className="item-info">
+                                <i className="fa fa-picture-o"></i>
+                                <h3>{work.title}</h3>
+                                <span>{work.name} Website</span>
+                            </div>
+                        </div>                                                                                       
+                    </article>
+
+                   
+        })
+         
+
         return (
             <div>
                 <section id="portfolio" className="section-content bg3">
@@ -75,8 +108,8 @@ class Works extends Component {
                             <div className="col-md-12">
                                 <div id="portfolio-items" className="portfolio-items item_fade_in">
                                     
-          
-                                   <article className="website">                                       
+                                    {work}
+                                   {/*<article className="website">                                       
                                         <img src={adi} alt="adinugraha.my.id"/>
                                         <div className="overlay">
                                             <div className="item-info">
@@ -163,7 +196,7 @@ class Works extends Component {
                                                 <span>Website Application</span>
                                             </div>
                                         </div>                                                                                        
-                                    </article>
+                                    </article>*/}
 
                                    
                                     

@@ -1,37 +1,81 @@
 import React, { Component } from 'react';
 import MyPhoto from '../assets/images/me.png';
 import Signature from '../assets/images/signature.PNG';
-
-const BASE_URL = 'https://shoper.co.id/service.php?action=last_videos&limit=1&type=json';
-  
+ 
 class About extends Component {
     
-    constructor(props) {
-        super(props);
+   constructor(){
+        super();
+        this.state = {
+            data: [],
+            exp:null,
+            client:null,
+            ongoing:null,
+            done:null,
+            abil: []
+        };
+    };    
 
-        this.state = {national: []};
+    componentDidMount() {            
+        const BASE_URL = 'https://api.shoper.co.id/about.php'; 
+        fetch(BASE_URL)
+        .then(response => response.json())
+        .then(json => {
+            this.setState({ data: json }); 
+            
+        });   
+
+        
+        const EXP = 'https://api.shoper.co.id/experience.php'; 
+        fetch(EXP)
+        .then(response => response.json())
+        .then(item => {
+            this.setState({
+                          exp: item.experience,
+                          client: item.clients,
+                          ongoing: item.ongoing,
+                          done: item.done
+                        });                
+
+        });
+
+        const ABILITY = 'https://api.shoper.co.id/ability.php';  
+        fetch(ABILITY)
+        .then(response => response.json())
+        .then(data => {
+                this.setState({abil: data});
+        });     
     }
 
     render() {
-          var myOptions = { 
-            method:'GET',                       
-            mode: 'cors',
-            cache: 'default'
-        };
-        
-        fetch(BASE_URL, myOptions)
-            .then(response => response.json())
-            .then(data => {                
-                this.setState({ national: data.RestResponse.result });                
-            });        
-             const nations = this.state.national.map((nation, i) => {
-                 console.log('nations',nation.country);
-                return <div>
-                    <h1>{nation.country}</h1>
-                    <span>{nation.capital}, {nation.name}</span>
-                </div>
-                });
+        const abilities = this.state.abil.map((abiliti, i) =>{
+            return <div key={abiliti.id}>
+                       <div className="col-md-4">                            
+                           <div className="services-box new-line" >
+                               <h4> {abiliti.title}</h4>
+                               <div className="services-box-icon">
+                                    <i className={abiliti.icon}></i>
+                               </div>
+                               <div className="service-box-info">
+                                   <p>
+                                      {abiliti.description}
+                                   </p>
+                               </div>
+                           </div>                                
+                       </div>
+                   </div>
+        });
+
+        const datas = this.state.data.map((data, i) => {
+          
+            return <div  key = {i}>
+                        <p>                            
+                           {data.description}
+                        </p>
+                    </div>
                 
+        });
+
         return (
             <div>
                  <section id="about" className="section-content bg1">
@@ -54,16 +98,10 @@ class About extends Component {
                                 </div>
                             </div>                            
                             <div className="col-md-4 item_top" >
-                                <p className="quoteline">
-                                    {nations}
+                                <p className="quoteline">                                   
                                     Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.
                                 </p>
-                                <p>
-                                    Hello, I'm a "Web and Application Developer" from Jakarta, Indonesia. I hold a bachelor's degree of Information System from the Binus University.
-                                </p>
-                                <p>
-                                    I currently make a team project and the name is EDSPROJECT, where I spend most of my time crafting and working on awesome projects.
-                                </p>
+                                {datas}
                                 <p className="text-right">
                                     <img src={Signature} alt="signature" />
                                 </p>
@@ -81,28 +119,28 @@ class About extends Component {
                                 <div className="number-counters text-center new-line" >
                                     <div className="counters-item">
                                         <i className="fa fa-group fa-2x"></i>
-                                        <strong data-to="20">20</strong>                                    
+                                        <strong data-to={this.state.client}>{this.state.client}</strong>
                                         <p>
                                             Clients
                                         </p>
                                     </div>
                                     <div className="counters-item">
                                         <i className="fa fa-flag fa-2x"></i>
-                                        <strong data-to="5">5</strong>                                        
+                                        <strong data-to={this.state.exp}>{this.state.exp}</strong>                                        
                                         <p>
                                             Year Experience
                                         </p>
                                     </div>
                                     <div className="counters-item">
                                         <i className="fa fa-clock-o fa-2x"></i>
-                                        <strong datann="0">0</strong>                                        
+                                        <strong data={this.state.ongoing}>{this.state.ongoing}</strong>                                        
                                         <p>
                                             Ongoing Projects
                                         </p>
                                     </div>
                                     <div className="counters-item">
                                         <i className="fa fa-thumbs-up fa-2x"></i>
-                                        <strong data-to="20">20</strong>                                        
+                                        <strong data-to={this.state.done}>{this.state.done}</strong>                                        
                                         <p>
                                             Projects Done
                                         </p>
@@ -111,45 +149,8 @@ class About extends Component {
                             </div>
                         </div>
                         <div className="row services" >
-                            <div className="col-md-4">                            
-                                <div className="services-box new-line item_left" >
-                                    <h4>WEB DESIGN</h4>
-                                    <div className="services-box-icon">
-                                        <i className="fa fa-smile-o fa-3x"></i>
-                                    </div>
-                                    <div className="service-box-info">
-                                        <p>
-                                            Have ability of CSS3 and HTML5, so i can make your website like company profile or marketing website to be an amazing and responsive.
-                                        </p>
-                                    </div>
-                                </div>                                
-                            </div>
-                            <div className="col-md-4">                                
-                                <div className="services-box new-line item_bottom">
-                                    <h4>Web Design</h4>
-                                    <div className="services-box-icon">
-                                        <i className="fa fa-html5 fa-3x"></i>
-                                    </div>
-                                    <div className="service-box-info">
-                                        <p>
-                                            I have great ability of PHP and i can make your custom request for application your business like e-commerce, system for event-organizer etc.
-                                        </p>
-                                    </div>
-                                </div>                                
-                            </div>
-                            <div className="col-md-4 clearfix">                                
-                                <div className="services-box new-line item_right">
-                                    <h4>Wordpress Themes</h4>
-                                    <div className="services-box-icon">
-                                        <i className="fa fa-link fa-3x"></i>
-                                    </div>
-                                    <div className="service-box-info">
-                                        <p>
-                                            Great ability of C# and Java language, making an application for your business to make sure your business integrated.
-                                        </p>
-                                    </div>
-                                </div>                                
-                            </div>
+                           {abilities}
+                           
                         </div>
                     </div>
                 </section>
